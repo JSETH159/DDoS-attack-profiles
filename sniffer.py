@@ -130,7 +130,7 @@ def assign_label(features):
     label = 0  # Normal
 
     # Label 1 — Port Scan: many distinct destination ports probed
-    if unique_ports > 10:
+    if unique_ports > 10 and pps > 20:
         label = max(label, 1)
 
     # Label 2 — UDP Flood: high UDP volume
