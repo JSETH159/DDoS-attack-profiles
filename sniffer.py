@@ -146,7 +146,7 @@ def assign_label(features):
         label = max(label, 4)
 
     # Label 5 — SYN Flood: many half-open connections (SYN without ACK)
-    if syn_only > 10 and unique_ports <= 10 and pps > 30:
+    if syn_only > 10 and http_count == 0 and unique_ports <= 10 and pps > 30:
         label = max(label, 5)
 
     # Label 6 — HTTP Flood / Application-layer flood:
