@@ -28,7 +28,7 @@ LABEL_NAMES = {
 # Window length in 0.5 seconds is long enough to capture packets to detect floods
 WINDOW_LENGTH = 0.5
 # Maximun packets per second allowed
-RATE_LIMIT_PPS = 3000
+RATE_LIMIT_PPS = 1000
 # Maximum packets allowed before rate limiting is enforced
 RATE_LIMIT_PACKETS = 80
 
